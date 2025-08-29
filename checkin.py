@@ -199,8 +199,8 @@ async def get_waf_cookies_with_playwright(account_name: str):
 def get_user_info(client, headers):
 	"""获取用户信息"""
 	try:
-		response = client.get('https://anyrouter.top/api/log/self/?p=1&page_size=10&type=0&token_name=&model_name=&start_timestamp=1756396800&end_timestamp=1756463996&group=', headers=headers, timeout=30)
-
+		response = client.get('https://anyrouter.top/api/user/self', headers=headers, timeout=30)
+        print(f'get_user_info success: {response.status_code}')
 		if response.status_code == 200:
 			data = response.json()
 			if data.get('success'):
