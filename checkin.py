@@ -200,7 +200,7 @@ def get_user_info(client, headers):
 	"""获取用户信息"""
 	try:
 		response = client.get('https://anyrouter.top/api/user/self', headers=headers, timeout=30)
-        print(f'get_user_info success: {response.status_code}')
+		print(f'[USER INFO RESPONSE] Response status code {response.status_code}')
 		if response.status_code == 200:
 			data = response.json()
 			if data.get('success'):
