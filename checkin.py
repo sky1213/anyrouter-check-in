@@ -249,17 +249,22 @@ async def check_in_account(account_info, account_index):
 
 		# 设置请求头
 		headers = {
-			'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36',
-			'Accept': 'application/json, text/plain, */*',
-			'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
-			'Accept-Encoding': 'gzip, deflate, br, zstd',
-			'Referer': 'https://anyrouter.top/console',
-			'Origin': 'https://anyrouter.top',
-			'Connection': 'keep-alive',
-			'Sec-Fetch-Dest': 'empty',
-			'Sec-Fetch-Mode': 'cors',
-			'Sec-Fetch-Site': 'same-origin',
-			'new-api-user': api_user,
+			'accept': 'application/json, text/plain, */*',
+	        'accept-language': 'zh-CN,zh;q=0.9',
+	        'cache-control': 'no-store',
+	        'content-length': '0',
+	        'new-api-user': api_user,
+	        'origin': 'https://anyrouter.top',
+	        'pragma': 'no-cache',
+	        'priority': 'u=1, i',
+	        'referer': 'https://anyrouter.top/console',
+	        'sec-ch-ua': '"Not)A;Brand";v="8", "Chromium";v="138", "Google Chrome";v="138"',
+	        'sec-ch-ua-mobile': '?0',
+	        'sec-ch-ua-platform': '"macOS"',
+	        'sec-fetch-dest': 'empty',
+	        'sec-fetch-mode': 'cors',
+	        'sec-fetch-site': 'same-origin',
+	        'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36'
 		}
 
 		user_info_text = None
